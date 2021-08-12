@@ -1,0 +1,19 @@
+extends layouts/auth-layout.pug
+
+block content
+	.registerContainer 
+		h1 Register
+		form(method="post")
+			input(type="text", name="firstName", placeholder="First Name", required="")
+			input(type="text", name="lastName", placeholder="Last Name", required="")
+			input(type="text", name="username", placeholder="Username", required="")
+			input(type="email", name="email", placeholder="Email", required="")
+			input#password(type="password", name="password", placeholder="Password" required="")
+			input#confirmPassword(type="password", name="confirmPassword", placeholder="Password Again" required="")
+			input(type="submit", value="Register")
+		a(href="/login") Already have an account? login here
+
+	script
+		let password = document.getElementById('password');
+		let passwordConfirm = document.getElementById('passwordConfirm');
+		
